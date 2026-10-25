@@ -1,0 +1,25 @@
+Pointwalk imported run animation — 2026-10-25
+
+Animation actually bundled and played:
+  Quaternius Universal Animation Library, Jog_Fwd_Loop (0.933333 seconds)
+  Author: Quaternius / Tomás Laulhé
+  License: CC0 1.0 Universal (Public Domain Dedication)
+  Author page: https://quaternius.com/packs/universalanimationlibrary.html
+  GitHub asset mirror:
+  https://github.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender
+  Asset path: Universal Animation Library[Standard]/Universal Animation Library[Standard]/Unreal-Godot/UAL1_Standard.glb
+
+vendor/quaternius-jog.js contains the original clip's 195 glTF animation tracks
+and node transforms, extracted without its mannequin mesh or textures. Source
+GLB SHA-256 is embedded in the module. vendor/QUATERNIUS-LICENSE.txt retains the
+asset pack's license. No scripts from the mirror were executed or bundled.
+
+run-clip.js plays those original position/quaternion/scale tracks with Three.js
+AnimationMixer. walker-gait.js retargets their segment directions to the existing
+short-legged outline figure. The imported animation drives arms, torso and free
+swinging legs. stair-support.js supplies the terrain path and foot-contact targets;
+IK blends contact corrections at stance/landing and maintains a forward knee plane.
+The renderer in walker.js retains the transparent white outline and hood shape.
+
+This is an adapted authored animation, not motion capture and not a physics
+simulation. Contact correction intentionally modifies the lower-body pose for stairs.

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050509">
+  <meta name="description" content="以 Three.js 製作的點彩階梯與白色人物跑步動畫。">
+  <title>Pointwalk</title>
+  <style>
+    :root { color-scheme:dark; background:#050509; }
+    body { margin:0; overflow:hidden; }
+    #world { position:fixed; inset:0; }
+    #world canvas { display:block; width:100%; height:100%; }
+    #status { position:fixed; inset:0; display:grid; place-items:center;
+      color:#c9b9e6; background:#050509; padding:30px; text-align:center; }
+    #status[hidden] { display:none; }
+  </style>
+</head>
+<body>
+  <main id="world" aria-label="彩色點狀花園中，白色筆觸人物沿著階梯奔跑的動畫"></main>
+  <div id="status" role="status" hidden></div>
+  <script type="module">
+    import('./scene.js').catch(error => { console.error(error); const s=document.querySelector('#status'); s.hidden=false; s.textContent='動畫載入失敗。請使用資料夾內的 preview.html 重新開啟，並確認瀏覽器支援 WebGL 2。'; });
+  </script>
+</body>
+</html>
