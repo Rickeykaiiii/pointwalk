@@ -1,0 +1,13 @@
+{
+  "name": "pointwalk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "python3 -m http.server 8765 --directory dist"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.11"
+  }
+}
